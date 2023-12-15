@@ -1,11 +1,11 @@
 html {
   --section-background-color: #b59a7f;
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(255, 230, 204, 0.7),
-    rgba(255, 218, 185, 0.8)
-  );
+--image-gradient: linear-gradient(
+  to bottom left,
+  rgb(181, 154, 127, 0.7),
+  rgb(163, 139, 114, 0.8)
+);
 
   --imp-text-color: #965241;
 }
@@ -53,18 +53,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #6C5B7B;
+  background: #355c7d;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgba(53, 92, 125, 0.959);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(53, 74, 125, 0.911);
   border-radius: 12px;
 }
 
@@ -316,6 +316,7 @@ button:focus {
 
 .home-about-section {
   position: relative;
+  background-color: #b59a7f !important;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
 }
