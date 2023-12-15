@@ -20,12 +20,6 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiPython /> {/* Python */}
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiRProject /> {/* R */}
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMatlab /> {/* Matlab */}
-      </Col>
     </Row>
   );
 }
