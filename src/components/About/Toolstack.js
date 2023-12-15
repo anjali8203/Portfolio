@@ -15,7 +15,7 @@ function Toolstack() {
     { title: "Cook a 5 course meal", completed: false },
     { title: "Paint or draw daily", completed: false },
     { title: "Visit every state in the US", completed: false },
-    { title: "Give 100k to charity", completed: true },
+    { title: "Give 100k to charity", completed: false },
   ];
 
   return (
