@@ -25,10 +25,10 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="BioKind"
-              description="Worked with nonprofit healthcare organizations"
-              ghLink="https://github.com/DSPG-Young-Scholars-Program/dspg23_website_template"
-              demoLink="https://dspg-young-scholars-program.github.io/biokind_dspg23/index.html"
+              title="Modeling the Business Climate in Local Counties"
+              description="I worked with a team to develop a classifier model using multiple predictors to evaluate the economic landscape of minority-owned businesses in Fairfax County. The model utilized statistical techniques and Machine Learning. I comprised the findings into a final report in the form of a website, which I presented to stakeholders.  "
+              ghLink="https://github.com/DSPG-Young-Scholars-Program/dspg23businessclimate"
+              demoLink="https://dspg-young-scholars-program.github.io/dspg23businessclimate/"
             />
           </Col>
 
@@ -36,10 +36,10 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="BioKind Analytics"
+              description="This was a project done for BioKind Analytics, a non-profit organization that provides data analysis to health care organizations. I worked with a team to examine the relationship between altriusm towards the healthcare industry and certain economic indicators using only open source data. The findings for this were compiled into a website. ."
+              ghLink="https://github.com/DSPG-Young-Scholars-Program/dspg23_website_template"
+              demoLink="https://dspg-young-scholars-program.github.io/biokind_dspg23/index.html"
             />
           </Col>
 
@@ -47,10 +47,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Policy Brief - The Threat of Facial Recognition Technology"
+              description="I wrote a policy brief regarding an imminent issue facing the world and submitted it to the United Nation’s Science Technology and Information forum. This policy brief was accepted and I had the opportunity to attend the UN conference, and this brief is posted on the official website as well. "
+              demoLink="https://sdgs.un.org/sites/default/files/2023-05/A6%20-%20Mehta%20-%20The%20Threat%20of%20Facial%20Recognition%20Softwares.pdf"              
             />
           </Col>
 
@@ -58,21 +57,20 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Captain Pixel's Office Hours"
+              description="This was a hackathon project,  tasked with creating something to improve education and sustainability, with my team I used Lua and RobloxStudio to create a fully interactive education game catered to young elementary school children. This project was borne due to what students experienced during the pandemic, in the hopes that during asynchronous school, while a student is waiting to speak with a teacher they can educate themselves. "
+              ghLink="https://devpost.com/software/captain-pixel-s-office-hour-queue"
+              demoLink="https://github.com/salachyan/Captain_Pixels_Office_Hour_Queue"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Fish Food Factory"
+              description= "This was another hackathon project to promote a more sustainable future. This was built using Python, and Tkinter to develop the GUI. The aim of this project was to help reduce food waste by making a interactive game where the more food waste a person causes the worse their ‘ecosystem’ is. "
+              ghLink="https://github.com/salachyan/fish-food-factory"
+              demoLink="https://devpost.com/software/fish-food-factory"
             />
           </Col>
 
@@ -80,11 +78,20 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Wordle"
+              description="This is a fully functional wordle game with an interactive GUI. It calls upon a dictionary and uses the corresponding colors to help the user reach the desired word."
+              ghLink="https://github.com/uva-cs3140-sp23/hw5-gui-wfn7ad-yyn8nw-dcq2ds"
+              //demoLink="https://blogs.soumya-jit.tech/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={emotion}
+              isBlog={false}
+              title="Course Review"
+              description="This is an implementation of a course review system that could be used at schools. It has a fully functional GUI where one can input classes, rank the class and the teachers, and search for classes. This is an incredibly important tool for college students. It was built in Java and has an interactive GUI. "
+              ghLink="https://github.com/uva-cs3140-sp23/hw7-coursereview-wfn7ad-yyn8w-dep4bx"
+              //demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
         </Row>
