@@ -446,6 +446,7 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  background-color: #a78d8a !important;
 }
 
 .project-card {
@@ -543,6 +544,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
+  background-color: #a78d8a !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
@@ -557,7 +559,7 @@ button:focus {
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 4px 5px 4px 3px rgba(238,185,162,0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -571,7 +573,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid rgba(225,138,122, 0.883) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -604,7 +606,7 @@ button:focus {
   padding-top: 110px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  background-color: #b59a7f;
+  background-color: #a78d8a !important;
   color: white !important;
 }
 
@@ -650,7 +652,7 @@ button:focus {
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: #e18a7a;
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -680,7 +682,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid #e18a7a;
 }
 
 .like-item {
@@ -690,8 +692,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #934c5e !important;
-  border-color: #934c5e !important;
+  background-color: #e18a7a !important;
+  border-color: #e18a7a !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -725,7 +727,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #99B898 !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
