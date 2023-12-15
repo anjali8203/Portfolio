@@ -1,17 +1,13 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: #b59a7f;
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(255, 230, 204, 0.7),
+    rgba(255, 218, 185, 0.8)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #965241;
 }
 
 .purple {
