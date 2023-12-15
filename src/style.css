@@ -190,7 +190,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #E5FCC2;
+  background: #772F1A;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -253,6 +253,7 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
+  background-color: #b59a7f; 
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -445,6 +446,7 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  background-color: #b59a7f;
 }
 
 .project-card {
@@ -542,6 +544,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
+  background-color: #b59a7f;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
@@ -603,6 +606,7 @@ button:focus {
   padding-top: 110px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  background-color: #b59a7f;
   color: white !important;
 }
 
