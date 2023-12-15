@@ -1,6 +1,10 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { AiFillGithub } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { Row, Col } from "react-bootstrap";
 
 function AboutCard() {
   return (
@@ -38,11 +42,51 @@ function AboutCard() {
               <ImPointRight /> Traveler of the world (hopefully)
             </li>
           </ul>
-
+                  <Row>
+          <Col md={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="purple">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/anjali8203"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://linkedin.com/in/anjali-mehta-a2887072"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="mailto:anjali8203@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <MdEmail />
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
           {/* <p style={{ color: "rgb(155 126 172)" }}>
             "They always say time changes things, but "{" "}
           </p>
           <footer className="blockquote-footer">Soumyajit</footer> */}
+          
         </blockquote>
       </Card.Body>
     </Card>
