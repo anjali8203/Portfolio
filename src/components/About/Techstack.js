@@ -19,6 +19,15 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         Python
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        Matlab
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        R
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        SQL
+      </Col>
     </Row>
   );
 }
