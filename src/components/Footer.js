@@ -4,6 +4,7 @@ import {
   AiFillGithub
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from 'react-icons/md';
 
 function Footer() {
   let date = new Date();
@@ -31,6 +32,16 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="mailto:anjali8203@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                className="icon-colour  home-social-icons"
+              >
+                <MdEmail />
               </a>
             </li>
           </ul>
