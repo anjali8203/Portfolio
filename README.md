@@ -1,3 +1,1 @@
-When I want to make changes: 
-
-1. make changes directly on github and then redeploy the website. 
+Welcome to my Portfolio website! Credits for the template go to the master branch from which I forked this, and then I made it my own. Enjoy! 
