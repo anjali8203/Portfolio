@@ -11,7 +11,7 @@ function Techstack() {
         HTML
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        CSS
+        C#
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         Java
