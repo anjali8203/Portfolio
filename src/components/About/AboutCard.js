@@ -12,7 +12,7 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Anjali Mehta </span>
             from <span className="purple"> Virginia</span>
             <br />
-            I am currently a third year at University of Virginia.
+            I am currently in my fourth year at the University of Virginia.
             <br />
             I'm studying Computer Science Engineering with a minor in Data Science. I have a strong interest in Machine Learning, Data Privacy, and Software Engineering. I choose to study computer science because I hope to make a positive impact on the world - and learn as much as possible while doing it! 
             <br />
