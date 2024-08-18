@@ -73,25 +73,6 @@ function Projects() {
               demoLink="https://devpost.com/software/fish-food-factory"
             />
           </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Wordle"
-              description="This is a fully functional wordle game with an interactive GUI. It calls upon a dictionary and uses the corresponding colors to help the user reach the desired word."
-              //demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Course Review"
-              description="This is a course review system that could be used at schools. It has a fully functional GUI where one can input classes, rank the class and the teachers, and search for classes. This is an incredibly important tool for college students. It was built in Java and has an interactive GUI. "
-              //demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
