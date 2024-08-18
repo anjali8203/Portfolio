@@ -49,7 +49,6 @@ function Projects() {
               isBlog={false}
               title="Policy Brief - The Threat of Facial Recognition Technology"
               description="I wrote a policy brief regarding an imminent issue facing the world and submitted it to the United Nation’s Science Technology and Information forum. This policy brief was accepted and I had the opportunity to attend the UN conference, and this brief is posted on the official website as well. "
-              ghLink="https://github.com/anjali8203/UN-policy"
               demoLink="https://sdgs.un.org/sites/default/files/2023-05/A6%20-%20Mehta%20-%20The%20Threat%20of%20Facial%20Recognition%20Softwares.pdf"              
             />
           </Col>
@@ -81,7 +80,6 @@ function Projects() {
               isBlog={false}
               title="Wordle"
               description="This is a fully functional wordle game with an interactive GUI. It calls upon a dictionary and uses the corresponding colors to help the user reach the desired word."
-              ghLink="https://github.com/uva-cs3140-sp23/hw5-gui-wfn7ad-yyn8nw-dcq2ds"
               //demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
@@ -91,7 +89,6 @@ function Projects() {
               isBlog={false}
               title="Course Review"
               description="This is a course review system that could be used at schools. It has a fully functional GUI where one can input classes, rank the class and the teachers, and search for classes. This is an incredibly important tool for college students. It was built in Java and has an interactive GUI. "
-              ghLink="https://github.com/uva-cs3140-sp23/hw7-coursereview-wfn7ad-yyn8w-dep4bx"
               //demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
