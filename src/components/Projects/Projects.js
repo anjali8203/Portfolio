@@ -67,10 +67,10 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Fish Food Factory"
-              description= "This was another hackathon project to promote a more sustainable future. This was built using Python, and Tkinter to develop the GUI. The aim of this project was to help reduce food waste by making a interactive game where the more food waste a person causes the worse their ‘ecosystem’ is. "
-              ghLink="https://github.com/salachyan/fish-food-factory"
-              demoLink="https://devpost.com/software/fish-food-factory"
+              title="Project Management Application"
+              description= "I developed a full-stack project management application using Django for the back-end and PostgreSQL for thedatabase. I Integrated Amazon S3 to enable secure file uploads with metadata storage for user-generated content. This project designed and consumed RESTful APIs to streamline front-end and back-end communication. During this process we conducted Beta Testing to gather user feedback. "
+              ghLink="https://github.com/anjali8203/PMA"
+              demoLink="https://github.com/anjali8203/PMA"
             />
           </Col>
         </Row>
