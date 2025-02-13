@@ -40,7 +40,6 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noreferrer"
-                rel="noopener noreferrer"
               >
                 <MdEmail />
               </a>

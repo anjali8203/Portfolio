@@ -21,7 +21,7 @@ function Home2() {
               <br />
               <br />My favorite language (as of now) is 
               <i>
-                <b className="purple"> Python </b>
+                <b className="purple"> Java </b>
               </i>
               <br />
               <br />
@@ -30,7 +30,7 @@ function Home2() {
                 <b className="purple"> Machine Learning </b> and
                 {" "}
                 <b className="purple">
-                  Blockchain.
+                  Data Privacy.
                 </b>
               </i>
               <br />
@@ -54,7 +54,7 @@ function Home2() {
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Feel free to <span className="purple">connect with me
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
