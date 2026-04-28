@@ -2,47 +2,52 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 
-
 function AboutCard() {
-  return (
-    <Card className="quote-card-view">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Anjali Mehta </span>
-            from <span className="purple"> Virginia</span>
-            <br />
-            I am currently in my fourth year at the University of Virginia.
-            <br />
-            I'm studying Computer Science Engineering with a minor in Data Science. I have a strong interest in Machine Learning, Data Privacy, and Software Engineering. I choose to study computer science because I hope to make a positive impact on the world - and learn as much as possible while doing it! 
-            <br />
-            <br />
-            I am a hard worker, a quick learner, and very motivated! 
-            <br />
-            <br />
-            Here are some of the many hats that I wear: 
-          </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Avid reader of books (mostly fiction) 
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Experimental chef 
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Environmental Protection Activist 
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Dog-Lover (2 dogs of my own and many fosters!)
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Traveler of the world (hopefully)
-            </li>
-          </ul>
-        </blockquote>
-      </Card.Body>
-    </Card>
-  );
+    return (
+        <Card className="quote-card-view">
+            <Card.Body>
+                <blockquote className="blockquote mb-0">
+                    <p style={{ textAlign: "justify" }}>
+                        Hi &mdash; I'm <span className="purple">Anjali Mehta</span> from{" "}
+                        <span className="purple">Virginia</span>.
+                        <br />
+                        I graduated in 2025 from the University of Virginia with a B.S. in
+                        Computer Science Engineering and a minor in Data Science. I have
+                        been working as a software developer for one year, focusing on
+                        practical, maintainable software and data-driven features.
+                        <br />
+                        My core interests include Machine Learning, Data Privacy, and
+                        Software Engineering &mdash; I enjoy turning technical ideas into reliable
+                        products and learning new tooling along the way.
+                        <br />
+                        <br />
+                        I am hard-working, a quick learner, and motivated to deliver
+                        high-quality solutions.
+                        <br />
+                        <br />
+                        Outside of work, I pursue a variety of hobbies and activities:
+                    </p>
+                    <ul>
+                        <li className="about-activity">
+                            <ImPointRight /> Reading &mdash; fiction and technical books
+                        </li>
+                        <li className="about-activity">
+                            <ImPointRight /> Experimental cooking and recipe development
+                        </li>
+                        <li className="about-activity">
+                            <ImPointRight /> Environmental advocacy and community volunteering
+                        </li>
+                        <li className="about-activity">
+                            <ImPointRight /> Dog care &amp; fostering &mdash; pet enthusiast
+                        </li>
+                        <li className="about-activity">
+                            <ImPointRight /> Traveling, photography, and hiking
+                        </li>
+                    </ul>
+                </blockquote>
+            </Card.Body>
+        </Card>
+    );
 }
 
 export default AboutCard;
