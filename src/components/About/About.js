@@ -1,16 +1,23 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
-import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
-import { AiFillGithub } from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+import Gallery from "./Gallery";
 
 function About() {
+    const timeline = [
+        { src: "/gallery/dogs.jpg", title: "My two dogs, Oakley (lab mix) and Maya (chihuahua mix)", year: "2022" },
+        { src: "/gallery/aoe.jpg", title: "I was part of Alpha Omega Epsilon, a professional and social sorority", year: "2022" },
+        { src: "/gallery/asb.jpg", title: "Volunteering with the NPS for Spring Break", year: "2023" },
+        { src: "/gallery/siena.jpg", title: "Semester Abroad in Siena, Italy", year: "2024" },
+        { src: "/gallery/italy class.jpg", title: "CS classes while studying abroad", year: "2024" },
+        { src: "/gallery/va.jpg", title: "University of Virginia Graduation!", year: "2025" },
+        { src: "/gallery/silai.jpg", title: "I organized a photoshoot for a south asian fashion brand called Silai the Label", year: "2025" },
+        { src: "/gallery/food.jpg", title: "I moved to Philadelphia and started exploring new recipes!", year: "2025" },
+        { src: "/gallery/sf.jpg", title: "I managed to squeeze in some travel over the past year (San Francisco, CA)", year: "2025" }
+  ];
+
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -20,74 +27,31 @@ function About() {
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
+              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Get to know who <strong className="purple">I am</strong>
-            </h1>
+            <h1 className="about-title">Anjali Mehta</h1>
+            <p className="about-subtitle">
+                          Software Developer (for now) 
+            </p>
             <Aboutcard />
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "80px", paddingBottom: "30px" }}
             className="about-img"
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
 
-        <Techstack />
+        <h2 className="project-heading">
+          <strong className="purple">Photos</strong>
+        </h2>
 
-        <h1 className="project-heading">
-          <strong className="purple">Bucketlist</strong>
-        </h1>
-        <Toolstack />
-         <Row>
-            <Col md={12} className="home-about-social">
-              <h1>FIND ME ON</h1>
-              <p>
-                Feel free to <span className="purple">connect </span>with me
-              </p>
-              <ul className="home-about-social-links">
-                <li className="social-icons">
-                  <a
-                    href="https://github.com/anjali8203"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <AiFillGithub />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://linkedin.com/in/anjali-mehta-a2887072"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="mailto:anjali8203@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <MdEmail />
-                  </a>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-        {/* <Github /> */}
+        <Gallery items={timeline} />
+
       </Container>
     </Container>
   );

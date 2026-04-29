@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import resumePdf from "../../Assets/Soumyajit_Behera-BIT_MESRA.pdf";
-import transcriptPdf from "../../Assets/Official Transcript 2024.pdf";
+import resumePdf from "../../Assets/Anjali_Mehta_Resume_2026.pdf";
+import transcriptPdf from "../../Assets/Transcript_UVA.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -12,121 +12,87 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
     const [width, setWidth] = useState(1200);
+    const [selectedDoc, setSelectedDoc] = useState("resume");
+    const [numPages, setNumPages] = useState(0);
 
     useEffect(() => {
         setWidth(window.innerWidth);
     }, []);
+
+    // Reset page count when switching documents
+    useEffect(() => {
+        setNumPages(0);
+    }, [selectedDoc]);
+
+    const selectedFile = selectedDoc === "resume" ? resumePdf : transcriptPdf;
+    const selectedTitle = selectedDoc === "resume" ? "Resume" : "Transcript";
+    function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+        setNumPages(nextNumPages);
+    }
 
     return (
         <div>
             <Container fluid className="resume-section">
                 <Particle />
 
-                <Row style={{ justifyContent: "center", position: "relative", gap: "12px" }}>
-                    <Button
-                        variant="outline-primary"
-                        href={resumePdf}
-                        target="_blank"
-                        style={{ maxWidth: "250px" }}
-                    >
-                        <AiOutlineDownload />
-                        &nbsp;Download Resume
-                    </Button>
+                <Row style={{ justifyContent: "center", gap: "16px", marginBottom: "24px" }}>
+                    <Col md={5}>
+                        <Card className="project-card-view">
+                            <Card.Body>
+                                <Card.Title>Resume</Card.Title>
+                                <Card.Text>Click to preview or download your resume.</Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    onClick={() => setSelectedDoc("resume")}
+                                    style={{ marginRight: "10px" }}
+                                >
+                                    View Resume
+                                </Button>
+                                <Button variant="outline-secondary" href={resumePdf} target="_blank">
+                                    <AiOutlineDownload />
+                                    &nbsp;Download
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                    <Button
-                        variant="outline-secondary"
-                        href={transcriptPdf}
-                        target="_blank"
-                        style={{ maxWidth: "250px" }}
-                    >
-                        <AiOutlineDownload />
-                        &nbsp;Download Transcript
-                    </Button>
+                    <Col md={5}>
+                        <Card className="project-card-view">
+                            <Card.Body>
+                                <Card.Title>Transcript</Card.Title>
+                                <Card.Text>Click to preview or download your transcript.</Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    onClick={() => setSelectedDoc("transcript")}
+                                    style={{ marginRight: "10px" }}
+                                >
+                                    View Transcript
+                                </Button>
+                                <Button variant="outline-secondary" href={transcriptPdf} target="_blank">
+                                    <AiOutlineDownload />
+                                    &nbsp;Download
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
                 </Row>
 
-                <Row className="resume" style={{ justifyContent: "center", marginTop: "30px" }}>
-                    <Document file={resumePdf} className="d-flex justify-content-center">
-                        <Page pageNumber={1} scale={width > 786 ? 1.3 : 0.6} />
+                <Row className="resume" style={{ justifyContent: "center", marginTop: "10px" }}>
+                    <h4 style={{ marginBottom: "16px", color: "var(--imp-text-color)" }}>{selectedTitle} Preview</h4>
+
+                    <Document
+                        file={selectedFile}
+                        className="d-flex justify-content-center"
+                        onLoadSuccess={onDocumentLoadSuccess}
+                    >
+                        {/* Render all pages when available */}
+                        {Array.from(new Array(numPages), (el, index) => (
+                            <div key={`page_${index + 1}`} style={{ marginBottom: 16 }}>
+                                <Page pageNumber={index + 1} scale={width > 786 ? 1.3 : 0.6} />
+                            </div>
+                        ))}
                     </Document>
-                </Row>
-
-                <Container style={{ marginTop: "40px", maxWidth: "920px" }}>
-                    <Row>
-                        <Col>
-                            <h2 style={{ color: "var(--imp-text-color)" }}>Education</h2>
-                            <p>
-                                <strong>University of Virginia</strong> &ndash; Aug 2021 &ndash; May 2025
-                                <br />
-                                Bachelor of Science in Computer Science Engineering, Minor in Data Science; GPA: 3.76/4.0
-                                <br />
-                                Charlottesville, VA
-                                <br />
-                                Organizations: Public Policy for Engineers, Alpha Omega Epsilon, UVA Engineering Tour Guide, Alternative Spring Break, Fashion and AI Club
-                                <br />
-                                Completed a semester abroad in Siena, Italy (Spring 2024)
-                            </p>
-
-                            <h2 style={{ color: "var(--imp-text-color)", marginTop: "20px" }}>Experience</h2>
-
-                            <h5>Software Developer &mdash; AVEVA</h5>
-                            <p><em>July 2025 &ndash; Present, Philadelphia, PA</em></p>
-                            <ul>
-                                <li>Worked with an agile engineering team developing and maintaining cloud-based microservices.</li>
-                                <li>Built a secure PATCH API endpoint to support dynamic updates to datasets within an enterprise data harmonization platform.</li>
-                                <li>Produced technical documentation and troubleshooting guides through internal wikis to support 24/7 on-call support.</li>
-                                <li>Developed dataset profiling features (unique values, duplicates, distributions) that enabled AI-generated natural language summaries for end users.</li>
-                            </ul>
-
-                            <h5>Human Centered Design Intern &mdash; Davenport Strategic Innovation and Design</h5>
-                            <p><em>January 2025 &ndash; May 2025, Charlottesville, VA</em></p>
-                            <ul>
-                                <li>Conducted stakeholder interviews and surveys to identify user needs for a nonprofit-matching platform.</li>
-                                <li>Consolidated qualitative research into product requirements and created Figma mock-ups for early-stage designs.</li>
-                            </ul>
-
-                            <h5>Software Developer Intern &mdash; AVEVA</h5>
-                            <p><em>May 2024 &ndash; August 2024, Philadelphia, PA</em></p>
-                            <ul>
-                                <li>Automated deployment of cloud microservices using Azure infrastructure as code, improving reliability and scalability.</li>
-                                <li>Improved system performance and code quality through unit testing and debugging.</li>
-                                <li>Documented deployment pipelines and engineering workflows for internal use.</li>
-                            </ul>
-
-                            <h5>Data Science Intern &mdash; UVA Biocomplexity Institute</h5>
-                            <p><em>June 2023 &ndash; January 2024, Arlington, VA</em></p>
-                            <ul>
-                                <li>Developed a machine learning-based business climate classifier for Fairfax County.</li>
-                                <li>Featured on WJLA Channel 7 News for research contributions and impact on policy discussions.</li>
-                                <li>Built data models integrating census and economic data using statistical modeling, NLP, and web scraping.</li>
-                            </ul>
-
-                            <h2 style={{ color: "var(--imp-text-color)", marginTop: "20px" }}>Selected Writing & Research</h2>
-
-                            <h5>White Box vs. Black Box &mdash; Ethical Trade-Offs of AI Transparency</h5>
-                            <p><em>May 2025 &mdash; University of Virginia</em></p>
-                            <ul>
-                                <li>Conducted a socio-technical analysis using the Social Construction of Technology (SCOT) framework to evaluate AI transparency.</li>
-                                <li>Analyzed trade-offs between interpretability, innovation, privacy, and accountability in machine learning systems.</li>
-                                <li>Developed policy-oriented recommendations for responsible and context-dependent AI deployment.</li>
-                            </ul>
-
-                            <h5>Enhancing Minority Business Representation through Machine Learning</h5>
-                            <p><em>May 2025 &mdash; University of Virginia</em></p>
-                            <ul>
-                                <li>Developed a machine learning classifier to identify minority-owned businesses in Fairfax County, revealing dataset underrepresentation.</li>
-                                <li>Designed an interpretable decision-tree model to prioritize transparency in policy applications.</li>
-                                <li>Authored a technical report detailing model architecture, data pipelines, and evaluation methodology.</li>
-                            </ul>
-
-                            <h5>The Threat of Facial Recognition Technology</h5>
-                            <p><em>May 2023 &mdash; UN Science, Technology and Innovation Forum</em></p>
-                            <ul>
-                                <li>Authored and presented a policy paper analyzing facial recognition systems and their societal implications.</li>
-                                <li>Translated complex machine learning concepts into clear policy recommendations for a global audience.</li>
-                            </ul>
-                        </Col>
-                    </Row>
-                </Container>
+                </Row>              
             </Container>
         </div>
     );
