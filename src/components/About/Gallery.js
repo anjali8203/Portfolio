@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
@@ -54,19 +54,19 @@ function Gallery({ items = [] }) {
 
   const closeModal = () => setModalOpen(false);
 
-  const prevModal = () => setModalIndex((p) => (p - 1 + items.length) % items.length);
-  const nextModal = () => setModalIndex((p) => (p + 1) % items.length);
+  const prevModal = useCallback(() => setModalIndex((p) => (p - 1 + items.length) % items.length), [items.length]);
+  const nextModal = useCallback(() => setModalIndex((p) => (p + 1) % items.length), [items.length]);
 
   useEffect(() => {
-    if (!modalOpen) return;
-    const onKey = (e) => {
-      if (e.key === "ArrowLeft") prevModal();
-      if (e.key === "ArrowRight") nextModal();
-      if (e.key === "Escape") closeModal();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [modalOpen, items.length]);
+      if (!modalOpen) return;
+      const onKey = (e) => {
+        if (e.key === "ArrowLeft") prevModal();
+        if (e.key === "ArrowRight") nextModal();
+        if (e.key === "Escape") closeModal();
+      };
+      window.addEventListener("keydown", onKey);
+      return () => window.removeEventListener("keydown", onKey);
+    }, [modalOpen, prevModal, nextModal]);
 
   return (
     <>
